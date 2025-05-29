@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Nam</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="travel_recomendation.css">
+</head>
+<body>
+    <nav class="navbar-bg shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between navbar-container">
+            <div class="flex items-center mb-4 md:mb-0">
+                <svg class="travelbloom-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM12 4.472L19.5 8.236V15.764L12 19.528L4.5 15.764V8.236L12 4.472ZM12 10.5L17 13.5L12 16.5L7 13.5L12 10.5Z" fill="currentColor"/>
+                </svg>
+                <span class="text-white text-2xl font-semibold tracking-wide">TravelBloom</span>
+            </div>
+
+            <div class="flex-grow flex justify-center md:justify-start nav-links">
+                <a href="#home" class="nav-link" data-page="home">Home</a>
+                <a href="#about" class="nav-link" data-page="about">About Us</a>
+                <a href="#contact" class="nav-link" data-page="contact">Contact Us</a>
+                <a href="#recommendations" class="nav-link" data-page="recommendations">Recommendations</a>
+            </div>
+
+            <div id="search-section" class="flex items-center space-x-2 search-section">
+                <div class="relative flex items-center search-input-wrapper">
+                    <input type="text" id="search-input" placeholder="Enter a destination or keyword" class="search-input pr-10">
+                    <svg class="search-icon absolute right-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L15 15" stroke="#A0AEC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="flex space-x-2 search-buttons">
+                    <button id="search-button" class="search-button">Search</button>
+                    <button id="clear-button" class="clear-button">Clear</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home-page" class="hero-section page-section active">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    EXPLORE<br>DREAM<br>DESTINATION
+                </h1>
+                <p class="hero-description">
+                    It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
+                </p>
+                <button class="book-now-button">BOOK NOW</button>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+
+        <section id="about-page" class="page-section">
+            <div class="container mx-auto">
+                <h2 class="section-title">About TravelBloom</h2>
+                <p class="text-center text-lg mb-8 max-w-3xl mx-auto">
+                    TravelBloom is dedicated to transforming your travel dreams into reality. We believe that every journey should be an unforgettable experience, filled with discovery, joy, and seamless exploration. Our mission is to provide personalized travel solutions, expert guidance, and unparalleled support to ensure your adventures are nothing short of extraordinary. From breathtaking landscapes to vibrant cultures, we are here to help you explore, dream, and discover your perfect destination.
+                </p>
+
+                <h3 class="section-title mt-12 mb-8">Meet Our Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 team-grid">
+                    <div class="team-member">
+                        <img src="https://placehold.co/100x100/0d9488/FFFFFF?text=JD" alt="John Doe" class="rounded-full mx-auto mb-4">
+                        <h4 class="team-member-name">John Doe</h4>
+                        <p class="team-member-role">Founder & CEO</p>
+                        <p class="text-sm mt-2 text-gray-600">Visionary leader passionate about travel and innovation.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/100x100/0d9488/FFFFFF?text=JA" alt="Jane Appleseed" class="rounded-full mx-auto mb-4">
+                        <h4 class="team-member-name">Jane Appleseed</h4>
+                        <p class="team-member-role">Head of Destinations</p>
+                        <p class="text-sm mt-2 text-gray-600">Expert in curating unique and immersive travel experiences.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/100x100/0d9488/FFFFFF?text=MS" alt="Michael Smith" class="rounded-full mx-auto mb-4">
+                        <h4 class="team-member-name">Michael Smith</h4>
+                        <p class="team-member-role">Customer Relations Manager</p>
+                        <p class="text-sm mt-2 text-gray-600">Ensuring every client receives exceptional service and support.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/100x100/0d9488/FFFFFF?text=EL" alt="Emily Lee" class="rounded-full mx-auto mb-4">
+                        <h4 class="team-member-name">Emily Lee</h4>
+                        <p class="team-member-role">Marketing Specialist</p>
+                        <p class="text-sm mt-2 text-gray-600">Bringing the magic of travel to our global audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-page" class="page-section">
+            <div class="container mx-auto">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="text-center text-lg mb-8 max-w-3xl mx-auto">
+                    Have a question, feedback, or need assistance? Reach out to us using the form below. We're here to help you plan your perfect adventure!
+                </p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="recommendations-page" class="page-section">
+            <div class="container mx-auto">
+                <h2 class="section-title">Travel Recommendations</h2>
+                <div id="recommendations-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 recommendations-grid">
+                    <p class="text-center col-span-full text-gray-500" id="no-results-message" style="display: none;">No recommendations found for your search.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page-section');
+            const searchSection = document.getElementById('search-section');
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const clearButton = document.getElementById('clear-button');
+            const recommendationsContainer = document.getElementById('recommendations-container');
+            const noResultsMessage = document.getElementById('no-results-message');
+
+            // Simulated JSON data (as if fetched from travel_recommendation_api.json)
+            const travelData = {
+                "countries": [
+                    {
+                        "id": 1,
+                        "name": "Australia",
+                        "cities": [
+                            {
+                                "name": "Sydney, Australia",
+                                "imageUrl": "https://t4.ftcdn.net/jpg/04/12/81/69/360_F_412816969_cpRI2c2aSHobr77aOOzgO3kcW7FWCn9e.jpg",
+                                "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+                            },
+                            {
+                                "name": "Melbourne, Australia",
+                                "imageUrl": "https://media.gettyimages.com/id/610374247/photo/melbourne-city-at-night.jpg?s=612x612&w=gi&k=20&c=q_yThHtejqJAuKBc-UaVjYyOQj3d6uoYW2bJvd9skl0=",
+                                "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Japan",
+                        "cities": [
+                            {
+                                "name": "Tokyo, Japan",
+                                "imageUrl": "https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2024/05/24/fe0c930b2f824c3e9e534f7d4d67278f_Tokyo_Shibuya_shutterstock_2437239903.jpg",
+                                "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+                            },
+                            {
+                                "name": "Kyoto, Japan",
+                                "imageUrl": "https://www.agoda.com/wp-content/uploads/2024/07/Kiyomizu-Dera-temple-in-Kyoto-Japan.jpg",
+                                "description": "Known for its historic temples, gardens, and traditional tea houses."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "Brazil",
+                        "cities": [
+                            {
+                                "name": "Rio de Janeiro, Brazil",
+                                "imageUrl": "https://www.newmarketholidays.co.uk/media/tlghg5iz/rio-brazil00001.jpeg",
+                                "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+                            },
+                            {
+                                "name": "São Paulo, Brazil",
+                                "imageUrl": "https://media.worldnomads.com/travel-safety/brazil/sao-paulo-hero.jpg",
+                                "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+                            }
+                        ]
+                    }
+                ],
+                "temples": [
+                    {
+                        "id": 1,
+                        "name": "Angkor Wat, Cambodia",
+                        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRnqEKS99nL0JoprMxzCm8NDs_JRpcymxb_Q&s",
+                        "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+                    },
+                    {
+                        "id": 2,
+                        "name": "Taj Mahal, India",
+                        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlLHtw0uPydDgSN_-BU0hK73KA1tGo-slDYw&s",
+                        "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+                    }
+                ],
+                "beaches": [
+                    {
+                        "id": 1,
+                        "name": "Bora Bora, French Polynesia",
+                        "imageUrl": "https://media.istockphoto.com/id/585487404/photo/bora-bora-tahiti-mt-otemanu.jpg?s=612x612&w=0&k=20&c=Bu2OnXGXVip__Q5tYUBNPE-x7OVyA6I9WGo4LHDFz2w=",
+                        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+                    },
+                    {
+                        "id": 2,
+                        "name": "Copacabana Beach, Brazil",
+                        "imageUrl": "https://travel.usnews.com/images/GettyImages-1295425390.jpg",
+                        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+                    }
+                ]
+            };
+
+            // Function to render recommendations
+            function renderRecommendations(data) {
+                recommendationsContainer.innerHTML = ''; // Clear previous recommendations
+                let hasResults = false;
+
+                // Helper to create a recommendation card
+                function createRecommendationCard(item) {
+                    hasResults = true;
+                    const card = document.createElement('div');
+                    card.className = 'recommendation-card';
+                    card.innerHTML = `
+                        <img src="${item.imageUrl}" alt="${item.name}" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/333333?text=Image+Not+Found';">
+                        <div class="recommendation-card-content">
+                            <h4 class="recommendation-card-title">${item.name}</h4>
+                            <p class="recommendation-card-description">${item.description}</p>
+                        </div>
+                    `;
+                    recommendationsContainer.appendChild(card);
+                }
+
+                // Display countries and their cities
+                data.countries.forEach(country => {
+                    country.cities.forEach(city => {
+                        createRecommendationCard(city);
+                    });
+                });
+
+                // Display temples
+                data.temples.forEach(temple => {
+                    createRecommendationCard(temple);
+                });
+
+                // Display beaches
+                data.beaches.forEach(beach => {
+                    createRecommendationCard(beach);
+                });
+
+                // Show/hide no results message
+                if (hasResults) {
+                    noResultsMessage.style.display = 'none';
+                } else {
+                    noResultsMessage.style.display = 'block';
+                }
+            }
+
+            // Function to filter recommendations based on search input
+            function filterRecommendations(query) {
+                const lowerCaseQuery = query.toLowerCase();
+                const filteredData = {
+                    countries: [],
+                    temples: [],
+                    beaches: []
+                };
+
+                // Filter countries and cities
+                travelData.countries.forEach(country => {
+                    const filteredCities = country.cities.filter(city =>
+                        city.name.toLowerCase().includes(lowerCaseQuery) ||
+                        city.description.toLowerCase().includes(lowerCaseQuery) ||
+                        country.name.toLowerCase().includes(lowerCaseQuery)
+                    );
+                    if (filteredCities.length > 0) {
+                        filteredData.countries.push({ ...country, cities: filteredCities });
+                    }
+                });
+
+                // Filter temples
+                filteredData.temples = travelData.temples.filter(temple =>
+                    temple.name.toLowerCase().includes(lowerCaseQuery) ||
+                    temple.description.toLowerCase().includes(lowerCaseQuery)
+                );
+
+                // Filter beaches
+                filteredData.beaches = travelData.beaches.filter(beach =>
+                    beach.name.toLowerCase().includes(lowerCaseQuery) ||
+                    beach.description.toLowerCase().includes(lowerCaseQuery)
+                );
+
+                renderRecommendations(filteredData);
+            }
+
+            // Function to show a specific page and update navbar
+            function showPage(pageId) {
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(pageId).classList.add('active');
+
+                // Hide/show search bar based on page
+                if (pageId === 'home-page' || pageId === 'recommendations-page') {
+                    searchSection.style.display = 'flex'; // Show search bar
+                } else {
+                    searchSection.style.display = 'none'; // Hide search bar
+                }
+
+                // Update active link styling
+                navLinks.forEach(link => {
+                    link.style.color = '#e2e8f0'; // Reset color
+                    link.style.backgroundColor = 'transparent'; // Reset background
+                });
+                const activeLink = document.querySelector(`.nav-link[data-page="${pageId.replace('-page', '')}"]`);
+                if (activeLink) {
+                    activeLink.style.color = '#ffffff'; // Active link color
+                    activeLink.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; // Active link background
+                }
+
+                // If navigating to recommendations page, render all recommendations initially
+                if (pageId === 'recommendations-page') {
+                    renderRecommendations(travelData);
+                    searchInput.value = ''; // Clear search input when navigating to recommendations
+                }
+            }
+
+            // Event listeners for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = e.target.dataset.page + '-page';
+                    showPage(pageId);
+                });
+            });
+
+            // Event listeners for search functionality
+            searchButton.addEventListener('click', () => {
+                filterRecommendations(searchInput.value);
+            });
+
+            clearButton.addEventListener('click', () => {
+                searchInput.value = '';
+                renderRecommendations(travelData); // Show all recommendations again
+            });
+
+            searchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+                    filterRecommendations(searchInput.value);
+                }
+            });
+
+            // Show home page on initial load
+            showPage('home-page');
+        });
+    </script>
+</body>
+</html>

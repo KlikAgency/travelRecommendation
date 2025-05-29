@@ -1,0 +1,350 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light background for contrast */
+        }
+        .navbar-bg {
+            background-color: #1a202c; /* Dark background matching the image */
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaIhlQevssX4thboXxwrngsbvzQeQeMhCpdw&s'); /* Placeholder for background pattern */
+            background-size: cover;
+            background-position: center;
+        }
+        .search-input {
+            background-color: #ffffff;
+            color: #333;
+            border: none;
+            outline: none;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px; /* Fully rounded */
+            width: 100%;
+            max-width: 300px; /* Limit input width */
+        }
+        .search-button {
+            background-color: #0d9488; /* Teal color for buttons */
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .search-button:hover {
+            background-color: #0f766e; /* Darker teal on hover */
+        }
+        .clear-button {
+            background-color: #0d9488; /* Teal color for buttons */
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .clear-button:hover {
+            background-color: #0f766e; /* Darker teal on hover */
+        }
+        .nav-link {
+            color: #e2e8f0; /* Light grey for links */
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        /* Custom SVG for the logo to match the image's abstract shape */
+        .travelbloom-logo {
+            width: 40px;
+            height: 40px;
+            fill: #ffffff;
+            margin-right: 0.5rem;
+        }
+        /* Custom SVG for the search icon */
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            fill: #a0aec0; /* Grey color for the icon */
+        }
+
+        /* Home Page specific styles */
+        .hero-section {
+            background-image: url('https://res.cloudinary.com/dtljonz0f/image/upload/shutterstock_329662223_ss_non-editorial_3_csm8lw'); /* Placeholder background image */
+            background-size: cover;
+            background-position: center;
+            height: calc(100vh - 80px); /* Adjust height based on navbar height */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align content to the left */
+            position: relative;
+            color: white;
+            padding-left: 5rem; /* Add padding to the left */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+        }
+
+        .hero-content {
+            z-index: 10; /* Ensure content is above the overlay */
+            max-width: 500px; /* Limit content width */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+        }
+
+        .hero-title {
+            font-size: 3.5rem; /* Large font size for title */
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem; /* Medium font size for description */
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .book-now-button {
+            background-color: #0d9488; /* Teal color */
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .book-now-button:hover {
+            background-color: #0f766e; /* Darker teal on hover */
+        }
+
+        .social-icons {
+            position: absolute;
+            left: 2rem; /* Position to the left of the main content */
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Space between icons */
+            z-index: 10;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.8rem; /* Size of social icons */
+            transition: color 0.2s;
+        }
+
+        .social-icon:hover {
+            color: #0d9488; /* Teal color on hover */
+        }
+
+        /* About Us & Contact Us Page styles */
+        .page-section {
+            padding: 4rem 2rem;
+            min-height: calc(100vh - 80px); /* Ensure minimum height */
+            background-color: #ffffff;
+            color: #333;
+            display: none; /* Hidden by default */
+        }
+
+        .page-section.active {
+            display: block; /* Show active page */
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* About Us specific styles */
+        .team-member {
+            background-color: #f8f8f8;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .team-member-name {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            color: #0d9488;
+        }
+        .team-member-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Us specific styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f8f8f8;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            color: #333;
+            background-color: #fff;
+            transition: border-color 0.2s;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: #0d9488;
+            outline: none;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .submit-button {
+            background-color: #0d9488;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            width: 100%;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #0f766e;
+        }
+
+        /* Recommendations Page styles */
+        .recommendation-card {
+            background-color: #f8f8f8;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .recommendation-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recommendation-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .recommendation-card-title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #0d9488;
+        }
+        .recommendation-card-description {
+            font-size: 0.9rem;
+            color: #666;
+            flex-grow: 1;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            .nav-link {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+            .search-section {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            .search-input-wrapper {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            .search-buttons {
+                flex-direction: row; /* Keep buttons in a row */
+                width: 100%;
+                justify-content: center;
+            }
+            .search-button, .clear-button {
+                width: 48%; /* Adjust width to fit two buttons */
+                text-align: center;
+                margin: 0 0.25rem;
+            }
+
+            /* Home page responsive adjustments */
+            .hero-section {
+                padding-left: 2rem;
+                height: auto; /* Allow height to adjust */
+                min-height: calc(100vh - 80px); /* Ensure minimum height */
+                justify-content: center; /* Center content vertically for smaller screens */
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 90%;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .social-icons {
+                position: static; /* Remove absolute positioning */
+                flex-direction: row; /* Arrange icons horizontally */
+                margin-top: 2rem;
+                transform: translateY(0);
+                width: 100%;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            /* About Us & Contact Us responsive adjustments */
+            .page-section {
+                padding: 2rem 1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .team-grid {
+                grid-template-columns: 1fr; /* Stack team members on small screens */
+            }
+            .recommendations-grid {
+                grid-template-columns: 1fr; /* Stack recommendations on small screens */
+            }
+        }
